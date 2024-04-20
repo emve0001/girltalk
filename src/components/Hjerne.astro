@@ -1,4 +1,21 @@
 ---
+import Taleboble_hjerne from "../components/Taleboble_hjerne.astro";
 ---
 
-<img src="" alt="">
+<section class="grid1_1">
+  <div>
+    <img src="../../public/img/hjerne.svg" alt="hjerne" />
+  </div>
+
+  <div>
+    <Taleboble_hjerne />
+  </div>
+</section>
+
+<style>
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+</style>
