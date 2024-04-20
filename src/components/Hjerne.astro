@@ -7,18 +7,10 @@
     <img src="../../public/img/hjerne.svg" alt="hjerne" />
   </div>
 
-  <div class="tale">
-    <div class="grid1_1">
-      <img
-        class="bobbel"
-        src="../../public/img/talebobbel.svg"
-        alt="talebobbel"
-      />
-      <p class="citat">
-        Faktisk føler 54% af unge piger mellem 12-24 år sig alene.
-      </p>
-    </div>
-  </div>
+  <img class="bobbel" src="../../public/img/talebobbel.svg" alt="talebobbel" />
+  <p class="citat">
+    Faktisk føler 54% af unge piger mellem 12-24 år sig alene.
+  </p>
 </section>
 
 <style>
@@ -30,14 +22,15 @@
 
   .hjerne {
     grid-area: 2 / 1 / 3 / 1;
+    padding-left: 20%;
   }
-
-  .tale {
-    grid-area: 1 / 2 / 2 / 3;
+  .citat {
+    grid-area: 1 / 2 / 1 / 3;
+    padding-right: 10%;
   }
-
   .bobbel {
-    grid-area: 1 / 1 / 1 / 1;
+    grid-area: 1 / 2 / 1 / 3;
+    padding-right: 10%;
   }
   p {
     font-size: 3rem;
