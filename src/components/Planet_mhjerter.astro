@@ -2,8 +2,39 @@
  import MainLayout from "../MainLayout.astro";
 ---
 
-<div><img src="src/./img/planet.webp" alt="planetmhjerter"></div>
+<div class="hjerter"><img src="src/./img/planet.webp" alt="planetmhjerter"></div>
 
 <div><p>Husk på du ikke sidder alene med dine følelser!</p></div>
 
-<div><img src="src/./img/streg.webp" alt="streg"></div>
+<div class="streg"><img src="src/./img/streg.webp" alt="streg"></div>
+
+
+<style>
+.hjerter {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 60vh;
+
+}
+img{
+max-width: 100%;
+max-height:100%;
+width: auto;
+height: auto;
+max-width: 80%;
+}
+p{
+    text-align: center;
+}
+.streg img{
+    width: 40px;
+    margin-left: 108px;
+}
+@media screen and (min-width: 768px) {
+.streg img {
+        width: 40px; 
+        margin-left: 578px; 
+}
+
+</style>
