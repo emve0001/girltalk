@@ -47,6 +47,7 @@ img {
 }
 p {
   color: var(--primary-text-color);
+  font-family: var(--secondary-font);
   font-family: "archivo_semibold";
 }
 

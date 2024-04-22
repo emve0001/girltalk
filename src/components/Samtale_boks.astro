@@ -27,18 +27,21 @@
    display: flex; 
    justify-content: space-between;
    align-items: center;
+   padding: 0 20px;
    
 }
 h1{
     margin: 0;
-      --tertiary: #273aaa
+    color:var(--tertiary);
+    margin-bottom: 30px;
 }
  .hjerteikon img{
-width: 50px;
+ width: 50px;
  height: auto;  
  } 
  .container2 {
     text-align: center; 
+    padding: 0 20px;
 }
 
 .column {
@@ -51,4 +54,36 @@ img {
     height: auto; 
 }
 
+
+@media screen and (min-width: 768px) {
+
+h1{
+margin-bottom: 60px;
+}
+ .hjerteikon img{
+ width: 75px;
+ height: auto;  
+ } 
+ .column {
+        margin: 30px auto; 
+        max-width: 50%; 
+    }
+
+    .container2{
+        margin-left:10%;
+    }
+    .column:nth-child(1),
+    .column:nth-child(3) {
+        margin-right: 20px ; 
+    }
+
+    .column:nth-child(2),
+    .column:nth-child(4) {
+        margin-left: 20px; 
+    }
+
+    img {
+        width: 450px; 
+    }
+}
 </style>
