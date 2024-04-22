@@ -1,6 +1,7 @@
 ---
 import Fold_ud_knapper from "../components/Fold_ud_knapper.astro";
 import EmneKnap from "../components/Emne_knap.astro";
+import Search from "../components/Search.astro";
 ---
 
 <div class="grid">
@@ -9,43 +10,49 @@ import EmneKnap from "../components/Emne_knap.astro";
 </div>
 
 <div class="grid1-5">
-  <EmneKnap text="Kærlighed"/>
-  <EmneKnap text="Selvværd"/>
-  <EmneKnap text="Venskab & familie"/>
-  <EmneKnap text="Krop og sex"/>
-  <EmneKnap text="Trivsel">
+  <EmneKnap text="Kærlighed" />
+  <EmneKnap text="Selvværd" />
+  <EmneKnap text="Venskab & familie" />
+  <EmneKnap text="Krop & sex" />
+  <EmneKnap text="Trivsel" />
+
+  <div>
+    <Search />
+  </div>
+
+  <div>
+    <Fold_ud_knapper />
+    <Fold_ud_knapper />
+    <Fold_ud_knapper />
+    <Fold_ud_knapper />
+    <Fold_ud_knapper />
+  </div>
+
+  <style>
+    div {
+      margin: 5px 30px;
+    }
+    h1 {
+      color: var(--primary-text-color);
+      font-family: var(--primary-font);
+      font-size: 50px /* var(--secondary-font-size) */;
+      line-height: var(--primary-line-height);
+      text-align: stretch;
+    }
+
+    img {
+      max-width: 400px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+    .grid1-5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin: 30px 30px;
+    }
+  </style>
 </div>
-
-<div>
-  <Fold_ud_knapper />
-  <Fold_ud_knapper />
-  <Fold_ud_knapper />
-  <Fold_ud_knapper />
-  <Fold_ud_knapper />
-</div>
-
-<style>
-  div {
-    margin: 5px 30px;
-  }
-  h1 {
-    color: var(--primary-text-color);
-    font-family: var(--primary-font);
-    font-size: 50px /* var(--secondary-font-size) */;
-    line-height: var(--primary-line-height);
-    text-align: stretch;
-  }
-
-  img {
-    max-width: 400px;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .grid1-5{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
-</style>
