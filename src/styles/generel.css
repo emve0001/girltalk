@@ -9,7 +9,7 @@
 
   @font-face {
     font-family: archivo_semibold;
-    src: url(../../public/fonts/ArchivoExpanded-SemoBold.woff2);
+    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
   }
   /*tekst*/
   --primary-text-color: #273aaa;
@@ -47,7 +47,13 @@ img {
 }
 p {
   color: var(--primary-text-color);
+  font-family: "archivo_semibold";
 }
+
+h1 {
+  font-family: "obviously";
+}
+
 body {
   background-color: var(--primary-baground-color);
   margin: 40px;
