@@ -2,36 +2,53 @@
  import MainLayout from "../MainLayout.astro";
 ---
 
-<div class="et">
-    <h1>SÅ LÆS NOGLE AF DE MANGE SPØRGSMÅL</h1>
-    <img src="src/./img/hjerteikon.webp" alt="hjerteikon">
-</div>
-
 <div class="container">
-<div class="row">
-<div class="column">
-                    <img src="src/img/spg1.webp" alt="Billede 1">
-                </div>
-                <div class="column">
-                    <img src="src/img/spg2.webp" alt="Billede 2">
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <img src="src/img/spg3.webp" alt="Billede 3">
-                </div>
-                <div class="column">
-                    <img src="src/img/spg4.webp" alt="Billede 4">
-</div>
-</div>
+    <h1>SÅ LÆS NOGLE AF DE MANGE SPØRGSMÅL</h1>
+    <div class="hjerteikon"> <img src="src/./img/hjerteikon.webp" alt="hjerteikon"></div>
 </div>
 
-
-
-
-
-
+<div class="container2">
+    <div class="column">
+        <img src="src/img/spg1.webp" alt="Billede 1">
+    </div>
+    <div class="column">
+        <img src="src/img/spg2.webp" alt="Billede 2">
+    </div>
+    <div class="column">
+        <img src="src/img/spg3webp.webp" alt="Billede 3">
+    </div>
+    <div class="column">
+        <img src="src/img/spg4.webp" alt="Billede 4">
+    </div>
+</div>
 
 <style>
+.container{
+   display: flex; 
+   justify-content: space-between;
+   align-items: center;
+   
+}
+h1{
+    margin: 0;
+      --tertiary: #273aaa
+}
+ .hjerteikon img{
+width: 50px;
+ height: auto;  
+ } 
+ .container2 {
+    text-align: center; 
+}
+
+.column {
+    margin: 40px auto; 
+}
+
+img {
+    display: block; 
+    width: 350px; 
+    height: auto; 
+}
 
 </style>

@@ -58,3 +58,9 @@ body {
   background-color: var(--primary-baground-color);
   margin: 40px;
 }
+
+h1 {
+  --tertiary-font-size: 80px;
+  --primary-text-color: #273aaa;
+  --primary-font: "obviously", sans-serif;
+}
