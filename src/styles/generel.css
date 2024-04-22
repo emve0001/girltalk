@@ -1,19 +1,19 @@
 /*************** Reset *********************/
 :root {
   /*baggrund*/
-  --primary-baground-color: #fff4eb;
+  --primary-baground-color: #fff5eb;
 
   /*anden "baggrundsfarve" bla. post-its mm.*/
-  --secondary: #f0c9d8;
-  --tertiary: #364396;
+  --secondary: #f7c7d9;
+  --tertiary: #273aaa;
 
   /*tekst*/
-  --primary-text-color: #364b98;
+  --primary-text-color: #273aaa;
 
   --secondary-text-color: #fc4d5c;
 
   /*strokes */
-  --acent-color: #364396;
+  --acent-color: #273aaa;
 
   /*Typer af fonte*/
   --primary-font: "obviously", sans-serif;
