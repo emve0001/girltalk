@@ -1,4 +1,103 @@
 ---
+
 ---
 
-<img src="" alt="">
+<section class="grid1_1">
+  <div class="hjerne">
+    <img src="../../public/img/hjerne.svg" alt="hjerne" />
+  </div>
+
+  <img class="bobbel" src="../../public/img/talebobbel.svg" alt="talebobbel" />
+  <p class="citat">
+    Faktisk føler 54% af unge piger mellem 12-24 år sig alene.
+  </p>
+</section>
+
+<style>
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .hjerne {
+    grid-area: 2 / 1 / 3 / 1;
+    justify-self: center;
+  }
+  .citat {
+    grid-area: 1 / 2 / 1 / 3;
+    justify-self: center;
+    margin: 18% 20%;
+  }
+  .bobbel {
+    grid-area: 1 / 2 / 1 / 3;
+    justify-self: center;
+  }
+  p {
+    font-size: 3rem;
+    font-family: var(--secondary-font);
+    color: var(--primary-baground-color);
+    grid-area: 1 / 1 / 1 / 1;
+    max-width: 505px;
+  }
+
+  .typewriter p {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret 0.75s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+</style>
+
+<script>
+  //find tekst
+  const citat = document.querySelector(".typewriter");
+
+  //start funktion ved scroll
+  window.addEventListener("scroll", citatWrite);
+
+  //funktion til scroll
+  function citatWrite() {
+    //-200 gør at animation først starter når man er scrollet 200px ind i den næste boks
+    const triggerBottom = window.innerHeight - 200;
+
+    //find de enkelte bokse
+    const citatTop = citat.getBoundingClientRect().top;
+    const citatBottom = citat.getBoundingClientRect().bottom;
+    const citatHeight = citat.getBoundingClientRect().height;
+
+    //hvis toppen af boksen kommer op forbi bunden af vinduet
+    if (citatTop < triggerBottom && citatTop > -citatHeight) {
+      //tilføj klasse til typewrite
+      document.querySelector("p").classList.add(".typewriter")
+    }
+    if (citatBottom < 100 || citatTop > triggerBottom) {
+      //fjern klasse til typewrite
+    }
+  } 
+</script>
