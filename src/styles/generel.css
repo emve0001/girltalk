@@ -45,6 +45,7 @@ img {
 
 p {
   color: var(--primary-text-color);
+  font-family: var(--secondary-font);
 }
 body {
   background-color: var(--primary-baground-color);
