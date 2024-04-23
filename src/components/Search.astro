@@ -1,0 +1,34 @@
+---
+
+---
+<form>
+  <input type="text" name="søgefelt" placeholder="Søg her..." />
+
+  <button><img src="../../public/img/soeg.svg" alt="søg" /></button>
+</form>
+
+<style>
+  
+  button {
+    /* Nulstil alle stylingregler til standardværdier */
+    all: unset;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  input {
+    border: none;
+    background-color: var(--primary-baground-color);
+    border-bottom: 2px solid var(--secondary-text-color); /* Tilføj en streg under input */
+    font-size: 30px;
+    font-family: var(--secondary-font);
+    width: 80%;
+    line-height: 3rem;
+  }
+
+  input::placeholder {
+    color: #c9c4c4; /* Farve på placeholder-teksten */
+  }
+</style>
