@@ -8,6 +8,7 @@
   --tertiary: #273aaa;
 
   @font-face {
+  @font-face {
     font-family: archivo_semibold;
     src: url (../../public/fonts/ArchivoExpanded-SemiBold.woff2);
   }
