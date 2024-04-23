@@ -4,12 +4,31 @@ import EmneKnap from "../components/Emne_knap.astro";
 import Search from "../components/Search.astro";
 ---
 
-<div class="grid">
-  <h1>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h1>
-  <img src="../../public/img/FAQ.svg" alt="talebobler" />
+<div class="container">
+  <img src="../../public/img/FAQ.webp" alt="talebobler" />
+    <h1>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h1>
 </div>
 
-<div class="grid1-5">
+<div class="spørgsmål">
+  <Fold_ud_knapper
+    text="Hvordan ved jeg om nogle er interesseret i mig?"
+    svar="Her står et godt svar"
+  />
+  <Fold_ud_knapper
+    text="Hvordan kan jeg få mod til at snakke med personen jeg har et crush på?"
+    svar="Her står et godt svar"
+  />
+    <Fold_ud_knapper
+      text="Hvad gør jeg, hvis jeg bliver afvist?"
+      svar="Her står et godt svar"
+    />
+    <Fold_ud_knapper
+      text="Hvordan får jeg personen jeg har et crush på til også at få et crush på mig?"
+      svar="Her står et godt svar"
+    />
+  </Fold_ud_knapper>
+
+  <div class="grid1-5">
   <EmneKnap text="Kærlighed" />
   <EmneKnap text="Selvværd" />
   <EmneKnap text="Venskab & familie" />
@@ -17,58 +36,99 @@ import Search from "../components/Search.astro";
   <EmneKnap text="Trivsel" />
 </div>
 
+
 <div id="soeg">
   <Search />
 </div>
+<hr class="streg">
 
-<div>
-  <Fold_ud_knapper
-    text="Hvordan vet jeg om noen liker meg tilbake?"
-    svar="Her står et godt svar"
-  />
-  <Fold_ud_knapper
-    text="Hvordan kan jeg få mot til å snakke med personen jeg liker?"
-    svar="Her står et godt svar"
-  >
-    <Fold_ud_knapper
-      text="Hva gjør jeg hvis jeg blir avvist?"
-      svar="Her står et godt svar"
-    />
-    <Fold_ud_knapper
-      text="Hvordan kan personen jeg liker legge merke til meg?"
-      svar="Her står et godt svar"
-    />
-  </Fold_ud_knapper>
 
   <style>
-    div {
+    /* div {
       margin: 5px 30px;
-    }
-    h1 {
-      color: var(--primary-text-color);
-      font-family: var(--primary-font);
-      font-size: 50px /* var(--secondary-font-size) */;
-      line-height: var(--primary-line-height);
-      text-align: stretch;
-    }
-
-    img {
+    } */
+    
+    /* img {
       max-width: 400px;
-    }
+    } */
 
-    .grid {
+    /* .grid {
       display: grid;
       grid-template-columns: 2fr 1fr;
+    } */
+    .container{ 
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     }
+    .container img {
+      width: 150px;
+      margin-bottom:50px;
+    }
+
+    h1 {
+      color:var(--tertiary);
+      font-family: var(--primary-font);
+      font-size: 40px /* var(--secondary-font-size) */;
+      line-height: var(--primary-line-height);
+      text-align: center;
+    }
+
+   .spørgsmål{ 
+    margin-top:20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin-bottom:60px;
+   } 
     .grid1-5 {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      gap: 2rem;
-      margin: 30px 30px;
+      gap: 1.5rem;
+      padding: 8px 70px;
+      /*husk rød farve (virkede ikke da jeg ville sætte ind)*/
     }
 
     #soeg {
-      margin: 5% 10%;
+     margin-top: 20px;
     }
+    .streg {
+  border: none; 
+  border-top: 2px solid #fc4d5c; 
+  width: 100%; 
+}
+@media screen and (min-width: 768px){
+  .container{ 
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .container img {
+      width: 250px;
+      margin-bottom:50px;
+    }
+    h1 {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .spørgsmål{ 
+    width: 100%;
+   } 
+   .grid1-5 {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 1.5rem;
+    flex-wrap: wrap; 
+    }
+}
+
   </style>
 </div>

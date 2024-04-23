@@ -1,9 +1,21 @@
 /*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: #000; */
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 :root {
-  /*baggrund*/
+  /*BAGGRUND*/
   --primary-baground-color: #fff5eb;
 
-  /*anden "baggrundsfarve" bla. post-its mm.*/
+  /*ANDEN "BAGGRUNDSFARVE" BLA. POST-ITS MM.*/
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
@@ -79,17 +91,6 @@
     --secondary-font-size: 74px;
 
     --tertiary-font-size: 80px;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background: #000; */
-  }
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
   }
 
   body {
