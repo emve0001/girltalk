@@ -4,8 +4,9 @@ import "../styles/generel.css";
 <section class="container">
 <section class="box1"> 
     <div class="grid_1-1">
-<h2>Måske føler du deg alene<h2>
-<img src="" alt="hoho">
+        <div>
+<h3>Måske føler du deg alene<h3></div>
+<img src="../../public/img/jente.svg" alt="hoho">
 </div>
     </section>
 
@@ -17,6 +18,7 @@ import "../styles/generel.css";
     .grid_1-1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        
     }
 
     .container {
@@ -27,24 +29,25 @@ import "../styles/generel.css";
         z-index: 1;
         background-color: #f7c7d9;
         width: 98%;
-        height: 150px;
+        height: 100%;
         padding: 20px;
     }
     .box2 {
         z-index: 0    ;
         position: absolute;
     background: #273aaa;
-    width: 716px;
-    height: 149px;
+    width: 98%;
+    height: 100%;
     top: 13px;
     left: 10px;
     }
-    h2 {
-        color: primary;
-        font-size: 40px;
+    h3 {
+        text-align: center;
+        margin-top: 18%;
     }
     img {
-        width: 100%;
+        width: 50%;
         height: auto;
+        margin-left: 40%;
     }
 </style>
