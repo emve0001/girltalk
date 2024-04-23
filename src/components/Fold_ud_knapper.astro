@@ -1,0 +1,88 @@
+---
+const { text } = Astro.props;
+---
+
+<div class="grid1_1">
+  <button class="flex fold-out-btn">
+    <img class="drej" src="../../public/img/downArrow.svg" alt="knap" />
+    <div>{text}</div>
+  </button>
+
+  <button>
+    <div class="additional-content">
+      <!-- Yderligere indhold, der foldes ud eller skjules -->
+      {text}
+    </div>
+  </button>
+</div>
+
+<style>
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
+  .grid1_1{
+    display: grid;
+   gap: 2rem;
+  }
+  .flex {
+    display: flex;
+    gap: 5%;
+  }
+
+  img {
+    width: 30px;
+    place-self: center;
+  }
+
+  .omvendt{
+    rotate: 180deg;
+  }
+
+  /* Skjul det yderligere indhold som standard */
+  .additional-content {
+    display: none;
+    background-color: var(--primary-text-color);
+    border-radius: 20px;
+    color: var(--primary-baground-color);
+    font-size: 20px;
+    padding: 20px 20px;
+   margin-left: 10%;  */
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  /* Vis det yderligere indhold, når det har klassen "show" */
+  .additional-content.show {
+    display: block;
+  }
+
+  /* Tilføj lidt styling til fold-ud knappen */
+  .fold-out-btn {
+    border: none;
+    background-color: var(--secondary);
+    border-radius: 20px;
+    color: var(--primary-text-color);
+    font-size: 20px;
+    padding: 20px 20px;
+    cursor: pointer;
+    margin-left: 40%;
+    width: fit-content;
+  }
+</style>
+
+<script>
+  // Find fold-ud knappen og det yderligere indhold
+  const foldOutBtn = document.querySelector(".fold-out-btn");
+  const additionalContent = document.querySelector(".additional-content");
+  const pil = document.querySelector(".drej");
+
+  // Tilføj en eventlistener til fold-ud knappen
+  foldOutBtn.addEventListener("click", function () {
+    // Skift tilstanden for det yderligere indhold mellem synlig og skjult
+    additionalContent.classList.toggle("show");
+    pil.classList.toggle("omvendt");
+    
+  });
+</script>
