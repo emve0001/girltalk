@@ -11,11 +11,13 @@ import Navigation from "./components/Navigation.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="https://use.typekit.net/pev0ruk.css">
+    <link rel="stylesheet" href="../src/styles/generel.css">
 		<title>Astro</title>
 	</head>
 <body>
     <header><Navigation/></header>
 <main>
+  <slot></slot>
 </main>        
 <footer></footer>
 </body>
