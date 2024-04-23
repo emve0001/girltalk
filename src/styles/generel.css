@@ -7,10 +7,10 @@
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
-  /* @font-face {
+  @font-face {
     font-family: archivo_semibold;
     src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
-  } */
+  }
   /*tekst*/
   --primary-text-color: #273aaa;
 
