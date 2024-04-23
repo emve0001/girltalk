@@ -3,12 +3,12 @@
 ---
 <div class="container">
 
-<div class="hj"> <img src="src/./img/hjerter2.webp" alt="hjerter"></div>
-<div class="planet"><img src="src/./img/planet.webp" alt="planetmhjerter"></div></div>
+<div class="hj"> <img src="../../img/hjerter2.webp" alt="hjerter"></div>
+<div class="planet"><img src="../../img/planet.webp" alt="planetmhjerter"></div></div>
 
 <div><p>Husk på du ikke sidder alene med dine følelser!</p></div>
 
-<div class="streg"><img src="src/./img/streg.webp" alt="streg"></div>
+<div class="streg"><img src="../../img/streg.webp" alt="streg"></div>
 
 
 <style>
@@ -19,7 +19,7 @@
  align-items: center;
  flex-direction: column;
  height: 60vh;
-
+ margin-top: 150px;
 }
 .hj{
 position: absolute;
@@ -40,16 +40,50 @@ p{
 .streg img{
     width: 40px;
     margin-left: 108px;
+    margin-bottom:150px ;
+
 }
 @media screen and (min-width: 768px) {
-.streg img {
-        width: 40px; 
-        margin-left: 638px; 
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 300px;
+    }
+
+    .hj {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        z-index: 0;  
+    }
+
+    .hj img {
+        max-width: 35%;
+    }
+
+    .streg img {
+        width: 40px;
+        margin: 0 auto;
+        margin-bottom: 30px; 
+    }
+
+    .planet {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        margin-top: 140px; 
+    }
+
+    .planet img {
+        max-width: 30%;
+    }
+    p {
+        margin-top: 90px;
+    }
 }
-img {
-    margin-bottom: 30px;
-    max-width: 40%;
-    max-height:80%;
-}
-}
+
 </style>
