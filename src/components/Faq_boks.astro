@@ -15,18 +15,30 @@ import Search from "../components/Search.astro";
   <EmneKnap text="Venskab & familie" />
   <EmneKnap text="Krop & sex" />
   <EmneKnap text="Trivsel" />
+</div>
 
-  <div>
-    <Search />
-  </div>
+<div id="soeg">
+  <Search />
+</div>
 
-  <div>
-    <Fold_ud_knapper />
-    <Fold_ud_knapper />
-    <Fold_ud_knapper />
-    <Fold_ud_knapper />
-    <Fold_ud_knapper />
-  </div>
+<div>
+  <Fold_ud_knapper
+    text="Hvordan vet jeg om noen liker meg tilbake?"
+    svar="Her står et godt svar"
+  />
+  <Fold_ud_knapper
+    text="Hvordan kan jeg få mot til å snakke med personen jeg liker?"
+    svar="Her står et godt svar"
+  >
+    <Fold_ud_knapper
+      text="Hva gjør jeg hvis jeg blir avvist?"
+      svar="Her står et godt svar"
+    />
+    <Fold_ud_knapper
+      text="Hvordan kan personen jeg liker legge merke til meg?"
+      svar="Her står et godt svar"
+    />
+  </Fold_ud_knapper>
 
   <style>
     div {
@@ -53,6 +65,10 @@ import Search from "../components/Search.astro";
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       gap: 2rem;
       margin: 30px 30px;
+    }
+
+    #soeg {
+      margin: 5% 10%;
     }
   </style>
 </div>
