@@ -7,10 +7,55 @@
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
-  /* @font-face {
+  @font-face {
     font-family: archivo_semibold;
-    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
-  } */
+    src: url (../../public/fonts/ArchivoExpanded-SemiBold.woff2);
+  }
+
+  h1 {
+    font-family: "obviously", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 79px;
+    color: var(--primary-text-color);
+  }
+  h2 {
+    font-family: "obviously", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    color: var(--primary-text-color);
+  }
+  h3 {
+    font-family: "archivo_semibold";
+    font-size: 50px;
+  }
+  h4 {
+    font-family: "obviously", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 72px;
+    color: var(--primary-text-color);
+  }
+  h5 {
+    color: var(--primary-text-color);
+    font-family: "archivo_semibold";
+    font-size: 35px;
+  }
+
+  h6 {
+    font-family: "obviously", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+  }
+
+  p {
+    color: var(--primary-text-color);
+    font-family: "archivo_semibold";
+    font-size: 16px;
+  }
+
   /*tekst*/
   --primary-text-color: #273aaa;
 
@@ -45,22 +90,8 @@ img {
   height: auto;
   display: block;
 }
-p {
-  color: var(--primary-text-color);
-  font-family: "archivo_semibold";
-}
-
-h1 {
-  font-family: "obviously";
-}
 
 body {
   background-color: var(--primary-baground-color);
   margin: 40px;
-}
-
-h1 {
-  --tertiary-font-size: 80px;
-  --primary-text-color: #273aaa;
-  --primary-font: "obviously", sans-serif;
 }
