@@ -8,6 +8,7 @@
   --tertiary: #273aaa;
 
   @font-face {
+<<<<<<< HEAD
   @font-face {
     font-family: archivo_semibold;
     src: url (../../public/fonts/ArchivoExpanded-SemiBold.woff2);
@@ -57,6 +58,11 @@
     font-size: 16px;
   }
 
+=======
+    font-family: archivo_semibold;
+    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
+  }
+>>>>>>> dc5577540d850a81a315115602b87c52a4211489
   /*tekst*/
   --primary-text-color: #273aaa;
 
