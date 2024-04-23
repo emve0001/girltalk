@@ -12,6 +12,18 @@
 
 
 <style>
+    @keyframes rotatePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet img {
+animation: rotatePlanet 30s linear infinite;
+}
 .container {
  position: relative;
  display: flex;
@@ -35,7 +47,11 @@ max-width: 100%;
 max-height:100%;
 }
 p{
-    text-align: center;
+text-align: center;
+color: var(--primary-text-color);
+font-family: "archivo_semibold";
+font-size: 16px;
+
 }
 .streg img{
     width: 40px;
@@ -44,6 +60,25 @@ p{
 
 }
 @media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 768px) {
+    
+    @keyframes rotatePlanet {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .planet img {
+        max-width: 30%;
+        animation: rotatePlanet 30s linear infinite;
+    }
+
+    
+}
     .container {
         position: relative;
         display: flex;
@@ -68,6 +103,7 @@ p{
         width: 40px;
         margin: 0 auto;
         margin-bottom: 30px; 
+        margin-left: 44.5%;
     }
 
     .planet {
@@ -78,9 +114,6 @@ p{
         margin-top: 140px; 
     }
 
-    .planet img {
-        max-width: 30%;
-    }
     p {
         margin-top: 90px;
     }
