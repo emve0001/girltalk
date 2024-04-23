@@ -7,60 +7,93 @@
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
-  /* @font-face {
-    font-family: archivo_semibold;
-    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
-  } */
-  /*tekst*/
-  --primary-text-color: #273aaa;
+  @font-face {
+    @font-face {
+      font-family: archivo_semibold;
+      src: url (../../public/fonts/ArchivoExpanded-SemiBold.woff2);
+    }
 
-  --secondary-text-color: #fc4d5c;
+    h1 {
+      font-family: "obviously", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 79px;
+      color: var(--primary-text-color);
+    }
+    h2 {
+      font-family: "obviously", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 60px;
+      color: var(--primary-text-color);
+    }
+    h3 {
+      font-family: "archivo_semibold";
+      font-size: 50px;
+    }
+    h4 {
+      font-family: "obviously", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 72px;
+      color: var(--primary-text-color);
+    }
+    h5 {
+      color: var(--primary-text-color);
+      font-family: "archivo_semibold";
+      font-size: 35px;
+    }
 
-  /*strokes */
-  --acent-color: #273aaa;
+    h6 {
+      font-family: "obviously", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      font-size: 40px;
+    }
 
-  /*Typer af fonte*/
-  --primary-font: "obviously", sans-serif;
-  --secondary-font: "archivo", sans-serif;
+    p {
+      color: var(--primary-text-color);
+      font-family: "archivo_semibold";
+      font-size: 16px;
+    }
 
-  --primary-line-height: 1.5;
-  --primary-list-style: none;
+    /*tekst*/
+    --primary-text-color: #273aaa;
 
-  /*SKRIFT-STØRRELSER*/
-  /* --primary-font-size: 24px; */
+    --secondary-text-color: #fc4d5c;
 
-  /*h2, bruges til overskrifter, næstmestbrugte str.*/
-  --secondary-font-size: 74px;
+    /*strokes */
+    --acent-color: #273aaa;
 
-  --tertiary-font-size: 80px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* background: #000; */
-}
-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-p {
-  color: var(--primary-text-color);
-  font-family: "archivo_semibold";
-}
+    /*Typer af fonte*/
+    --primary-font: "obviously", sans-serif;
+    --secondary-font: "archivo", sans-serif;
 
-h1 {
-  font-family: "obviously";
-}
+    --primary-line-height: 1.5;
+    --primary-list-style: none;
 
-body {
-  background-color: var(--primary-baground-color);
-  margin: 40px;
-}
+    /*SKRIFT-STØRRELSER*/
+    /* --primary-font-size: 24px; */
 
-h1 {
-  --tertiary-font-size: 80px;
-  --primary-text-color: #273aaa;
-  --primary-font: "obviously", sans-serif;
+    /*h2, bruges til overskrifter, næstmestbrugte str.*/
+    --secondary-font-size: 74px;
+
+    --tertiary-font-size: 80px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background: #000; */
+  }
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  body {
+    background-color: var(--primary-baground-color);
+    margin: 40px;
+  }
 }
