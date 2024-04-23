@@ -5,7 +5,7 @@ import Search from "../components/Search.astro";
 ---
 
 <div class="grid">
-  <h1>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h1>
+  <h4>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h4>
   <img src="../../public/img/FAQ.svg" alt="talebobler" />
 </div>
 
@@ -39,21 +39,17 @@ import Search from "../components/Search.astro";
       svar="Her står et godt svar"
     />
   </Fold_ud_knapper>
+</div>
 
-  <style>
+<style>
     div {
       margin: 5px 30px;
     }
-    h1 {
+    h4 {
       color: var(--primary-text-color);
       font-family: var(--primary-font);
-      font-size: 50px /* var(--secondary-font-size) */;
       line-height: var(--primary-line-height);
       text-align: stretch;
-    }
-
-    img {
-      max-width: 400px;
     }
 
     .grid {
@@ -70,5 +66,25 @@ import Search from "../components/Search.astro";
     #soeg {
       margin: 5% 10%;
     }
-  </style>
-</div>
+
+/* -------------------- MOBIL -------------------- */
+@media screen and (max-width: 800px) {
+      div {
+        margin: 20px 5px;
+      }
+      h4 {
+        font-size: 22px /* var(--secondary-font-size) */;
+      }
+      img {
+        max-width: 400px;
+      }
+
+      .grid1-5 {
+        display: flex;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0.2rem;
+        margin: 20px 0px;
+      }
+    }
+</style>
+
