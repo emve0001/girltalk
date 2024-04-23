@@ -7,10 +7,6 @@
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
-  @font-face {
-    font-family: archivo_semibold;
-    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
-  }
   /*tekst*/
   --primary-text-color: #273aaa;
 
@@ -33,6 +29,11 @@
   --secondary-font-size: 74px;
 
   --tertiary-font-size: 80px;
+
+  @font-face {
+    font-family: archivo_semibold;
+    src: url(../../public/fonts/ArchivoExpanded-SemiBold.woff2);
+  }
 }
 * {
   margin: 0;
@@ -60,7 +61,8 @@ body {
 }
 
 h1 {
-  --tertiary-font-size: 80px;
-  --primary-text-color: #273aaa;
-  --primary-font: "obviously", sans-serif;
+  font-size: var(--tertiary-font-size);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font);
+  text-transform: uppercase;
 }

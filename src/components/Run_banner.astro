@@ -1,0 +1,93 @@
+---
+ import MainLayout from "../MainLayout.astro";
+---
+<div class="tickerwrapper">
+    <ul class='list'>
+       <li class='listitem'>
+         <span>FAQ</span>
+       </li>
+       <li class='listitem'>
+         <span>PODCAST</span>
+       </li>
+       <li class='listitem'>
+         <span>BREVKASSE</span>
+       </li>
+       <li class='listitem'>
+         <span>FÆLLESSKAB</span>
+       </li>
+       <li class='listitem'>
+         <span>FAQ</span>
+       </li>
+       <li class='listitem'>
+         <span>PODCAST</span>
+       </li>
+       <li class='listitem'>
+         <span>BREVKASSE</span>
+       </li>
+       <li class='listitem'>
+         <span>FÆLLESSKAB</span>
+       </li>
+       <li class='listitem'>
+         <span>FAQ</span>
+       </li>
+       <li class='listitem'>
+         <span>PODCAST</span>
+       </li>
+      <li class='listitem'>
+         <span>BREVKASSE</span>
+       </li>
+       <li class='listitem'>
+         <span>FÆLLESSKAB</span>
+       </li>
+   </ul>
+ </div>
+
+ <style>
+    *, *::before, *::after{
+  -webkit-box-sizing:padding-box;
+  box-sizing:padding-box;
+}
+body,
+div,
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary);
+  font-size: 14px;
+}
+
+.tickerwrapper {
+  /* the outer div */
+  
+  position: relative;
+  top: 30px;
+  left:0%;
+  border: 1px solid #444;
+  background: #fff;
+  width: 99.9%;
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+ul.list {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+ul.list.cloned {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+ul.list li {
+  float: left;
+  padding-left: 20px;
+}
+ </style>
