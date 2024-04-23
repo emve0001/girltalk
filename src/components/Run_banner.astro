@@ -1,93 +1,62 @@
 ---
  import MainLayout from "../MainLayout.astro";
 ---
-<div class="tickerwrapper">
-    <ul class='list'>
-       <li class='listitem'>
-         <span>FAQ</span>
-       </li>
-       <li class='listitem'>
-         <span>PODCAST</span>
-       </li>
-       <li class='listitem'>
-         <span>BREVKASSE</span>
-       </li>
-       <li class='listitem'>
-         <span>FÆLLESSKAB</span>
-       </li>
-       <li class='listitem'>
-         <span>FAQ</span>
-       </li>
-       <li class='listitem'>
-         <span>PODCAST</span>
-       </li>
-       <li class='listitem'>
-         <span>BREVKASSE</span>
-       </li>
-       <li class='listitem'>
-         <span>FÆLLESSKAB</span>
-       </li>
-       <li class='listitem'>
-         <span>FAQ</span>
-       </li>
-       <li class='listitem'>
-         <span>PODCAST</span>
-       </li>
-      <li class='listitem'>
-         <span>BREVKASSE</span>
-       </li>
-       <li class='listitem'>
-         <span>FÆLLESSKAB</span>
-       </li>
-   </ul>
- </div>
+<div id="scroll-container" class="grid">
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <!-- Tilføj flere stykker tekst efter behov -->
+</div>
+<div id="scroll-container2" class="grid">
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <!-- Tilføj flere stykker tekst efter behov -->
+</div>
+<style>
+/* Kommentar for at forklare formålet med styling */
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 
- <style>
-    *, *::before, *::after{
-  -webkit-box-sizing:padding-box;
-  box-sizing:padding-box;
 }
-body,
-div,
-ul,
-li,
-p {
-  margin: 0;
-  padding: 0;
-  font-family: var(--primary);
-  font-size: 14px;
+#scroll-container{
+  white-space: nowrap; /* Forhindre tekst i at bryde linjer */
+  transform: translateX(100%); /* Startposition */
+  animation: my-animation 25s linear infinite; /* Animation */
+}
+.scroll-text {
+  /* Tilpasning af styling og animation efter behov */
 }
 
-.tickerwrapper {
-  /* the outer div */
-  
-  position: relative;
-  top: 30px;
-  left:0%;
-  border: 1px solid #444;
-  background: #fff;
-  width: 99.9%;
-  height: 30px;
-  overflow: hidden;
-  cursor: pointer;
+/* Tilføj forsinkelse til animationen for .scroll-container2 */
+#scroll-container2 .scroll-text {
+  animation-delay: 10s; /* Forsinkelse på 10 sekunder */
 }
 
-ul.list {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-  padding:0;
-  margin:0;
+/* Nøgleframes for animation */
+@keyframes my-animation {
+  from { transform: translateX(110%); } /* Startposition */
+  to { transform: translateX(-110%); } /* Slutposition */
 }
+</style>
 
-ul.list.cloned {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-ul.list li {
-  float: left;
-  padding-left: 20px;
-}
- </style>
