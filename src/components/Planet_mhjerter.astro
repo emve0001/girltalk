@@ -1,8 +1,10 @@
 ---
  import MainLayout from "../MainLayout.astro";
 ---
+<div class="container">
 
-<div class="hjerter"><img src="src/./img/planet.webp" alt="planetmhjerter"></div>
+<div class="hj"> <img src="src/./img/hjerter2.webp" alt="hjerter"></div>
+<div class="planet"><img src="src/./img/planet.webp" alt="planetmhjerter"></div></div>
 
 <div><p>Husk på du ikke sidder alene med dine følelser!</p></div>
 
@@ -10,19 +12,27 @@
 
 
 <style>
-.hjerter {
+.container {
+ position: relative;
  display: flex;
  justify-content: center;
  align-items: center;
+ flex-direction: column;
  height: 60vh;
 
+}
+.hj{
+position: absolute;
+top: 0;
+z-index: 1;
+margin-top: -55px;
+}
+.planet{
+z-index: 0;
 }
 img{
 max-width: 100%;
 max-height:100%;
-width: auto;
-height: auto;
-max-width: 80%;
 }
 p{
     text-align: center;
@@ -38,6 +48,8 @@ p{
 }
 img {
     margin-bottom: 30px;
+    max-width: 40%;
+    max-height:80%;
 }
 }
 </style>
