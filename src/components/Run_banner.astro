@@ -1,7 +1,8 @@
 ---
  import MainLayout from "../MainLayout.astro";
 ---
-<div id="scroll-container" class="grid">
+<div id="scroll-container">
+<div id="scroll-container1" class="grid">
   <div class="scroll-text">FAQ</div>
   <div class="scroll-text">PODCAST</div>
   <div class="scroll-text">BREVKASSE</div>
@@ -14,49 +15,71 @@
   <div class="scroll-text">PODCAST</div>
   <div class="scroll-text">BREVKASSE</div>
   <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text">FAQ</div>
+  <div class="scroll-text">PODCAST</div>
+  <div class="scroll-text">BREVKASSE</div>
+  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
   <!-- Tilføj flere stykker tekst efter behov -->
 </div>
 <div id="scroll-container2" class="grid">
-  <div class="scroll-text">FAQ</div>
-  <div class="scroll-text">PODCAST</div>
-  <div class="scroll-text">BREVKASSE</div>
-  <div class="scroll-text">FÆLLESSKAB</div>
-  <div class="scroll-text">FAQ</div>
-  <div class="scroll-text">PODCAST</div>
-  <div class="scroll-text">BREVKASSE</div>
-  <div class="scroll-text">FÆLLESSKAB</div>
-  <div class="scroll-text">FAQ</div>
-  <div class="scroll-text">PODCAST</div>
-  <div class="scroll-text">BREVKASSE</div>
-  <div class="scroll-text">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
+  <div class="scroll-text2">FAQ5</div>
+  <div class="scroll-text2">PODCAST</div>
+  <div class="scroll-text2">BREVKASSE</div>
+  <div class="scroll-text2">FÆLLESSKAB</div>
+
   <!-- Tilføj flere stykker tekst efter behov -->
 </div>
+</div>
 <style>
-/* Kommentar for at forklare formålet med styling */
+  *{
+    margin: 0;
+    box-sizing: border-box;
+  }
+#scroll-container{
+display: flex;
+align-items: flex-start;
+gap: 20px;
+}
 .grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(20, 1fr);
   gap: 20px;
+}
 
+#scroll-container1, #scroll-container2{
+  transform: translateX(120%); /* Startposition */
+  animation: my-animation 20s linear infinite; /* Animation */
 }
-#scroll-container{
-  white-space: nowrap; /* Forhindre tekst i at bryde linjer */
-  transform: translateX(100%); /* Startposition */
-  animation: my-animation 25s linear infinite; /* Animation */
-}
+
 .scroll-text {
   /* Tilpasning af styling og animation efter behov */
 }
-
-/* Tilføj forsinkelse til animationen for .scroll-container2 */
-#scroll-container2 .scroll-text {
-  animation-delay: 10s; /* Forsinkelse på 10 sekunder */
+#scroll-container2 {
+  /* animation-delay: 12.5s; */
 }
-
-/* Nøgleframes for animation */
 @keyframes my-animation {
-  from { transform: translateX(110%); } /* Startposition */
-  to { transform: translateX(-110%); } /* Slutposition */
+  from { transform: translateX(-1%); } /* Startposition */
+  to { transform: translateX(-101%); } /* Slutposition */
 }
 </style>
 
