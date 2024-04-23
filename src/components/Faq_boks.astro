@@ -42,49 +42,48 @@ import Search from "../components/Search.astro";
 </div>
 
 <style>
+  div {
+    margin: 5px 30px;
+  }
+  h4 {
+    color: var(--primary-text-color);
+    font-family: var(--primary-font);
+    line-height: var(--primary-line-height);
+    text-align: stretch;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .grid1-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin: 30px 30px;
+  }
+
+  #soeg {
+    margin: 5% 10%;
+  }
+
+  /* -------------------- MOBIL -------------------- */
+  @media screen and (max-width: 800px) {
     div {
-      margin: 5px 30px;
+      margin: 5% 5%;
     }
     h4 {
-      color: var(--primary-text-color);
-      font-family: var(--primary-font);
-      line-height: var(--primary-line-height);
-      text-align: stretch;
+      font-size: 22px /* var(--secondary-font-size) */;
+    }
+    img {
+      max-width: 400px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-    }
     .grid1-5 {
-      display: grid;
+      display: flex;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      gap: 2rem;
-      margin: 30px 30px;
+      gap: 1%;
+      margin: 5% 0%;
     }
-
-    #soeg {
-      margin: 5% 10%;
-    }
-
-/* -------------------- MOBIL -------------------- */
-@media screen and (max-width: 800px) {
-      div {
-        margin: 20px 5px;
-      }
-      h4 {
-        font-size: 22px /* var(--secondary-font-size) */;
-      }
-      img {
-        max-width: 400px;
-      }
-
-      .grid1-5 {
-        display: flex;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        gap: 0.2rem;
-        margin: 20px 0px;
-      }
-    }
+  }
 </style>
-
