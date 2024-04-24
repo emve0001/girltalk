@@ -1,0 +1,51 @@
+---
+ import MainLayout from "../MainLayout.astro";
+---
+<a href="#nextDiv">
+    <img id="scroll_ned" src="../../public/img/scroll-pil.svg" alt="scroll pil ned">
+</a>
+
+    <style>
+        img{
+        max-width: 100%;
+        max-height:100%;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        }
+    #scroll_ned{
+        margin: auto;
+        animation: pilAnim 3s ease 10s infinite normal forwards;
+    }
+
+    @keyframes pilAnim {
+    0% {
+        transform: translateY(0); /* Ingen ændring i positionen (startposition) */
+    }
+    50% {
+        transform: translateY(5px); /* Bevæg pilen 10px nedad */
+    }
+    100% {
+        transform: translateY(0); /* Gå tilbage til startpositionen */
+    }
+}
+    </style>
+
+<div id="nextDiv">
+    Indhold af den næste div
+</div>
+
+<script>
+    document.querySelector('a[href="#nextDiv"]').addEventListener('click', function(event) {
+        event.preventDefault(); // Forhindrer standardlinkopførsel
+
+        // Hent y-koordinaten for den næste div
+        const nextDivY = document.getElementById('nextDiv').getBoundingClientRect().top + window.scrollY;
+
+        // Scroll til den næste div
+        window.scrollTo({
+            top: nextDivY,
+            behavior: 'smooth' // Glat rulningseffekt
+        });
+    });
+</script>
