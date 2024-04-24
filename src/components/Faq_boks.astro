@@ -9,7 +9,26 @@ import Search from "../components/Search.astro";
   <img src="/img/FAQ.svg" alt="talebobler" />
 </div>
 
-<div class="grid1-5">
+<div class="spørgsmål">
+  <Fold_ud_knapper
+    text="Hvordan ved jeg om nogle er interesseret i mig?"
+    svar="Her står et godt svar"
+  />
+  <Fold_ud_knapper
+    text="Hvordan kan jeg få mod til at snakke med personen jeg har et crush på?"
+    svar="Her står et godt svar"
+  />
+    <Fold_ud_knapper
+      text="Hvad gør jeg, hvis jeg bliver afvist?"
+      svar="Her står et godt svar"
+    />
+    <Fold_ud_knapper
+      text="Hvordan får jeg personen jeg har et crush på til også at få et crush på mig?"
+      svar="Her står et godt svar"
+    />
+  </Fold_ud_knapper>
+
+  <div class="grid1-5">
   <EmneKnap text="Kærlighed" />
   <EmneKnap text="Selvværd" />
   <EmneKnap text="Venskab & familie" />
@@ -17,9 +36,11 @@ import Search from "../components/Search.astro";
   <EmneKnap text="Trivsel" />
 </div>
 
+
 <div id="soeg">
   <Search />
 </div>
+<hr class="streg">
 
 <div>
   <Fold_ud_knapper
