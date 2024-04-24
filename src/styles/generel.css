@@ -7,93 +7,91 @@
   --secondary: #f7c7d9;
   --tertiary: #273aaa;
 
-  @font-face {
-    @font-face {
-      font-family: archivo_semibold;
-      src: url (../../public/fonts/ArchivoExpanded-SemiBold.woff2);
-    }
+  /*tekst*/
+  --primary-text-color: #273aaa;
 
-    h1 {
-      font-family: "obviously", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 79px;
-      color: var(--primary-text-color);
-    }
-    h2 {
-      font-family: "obviously", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 60px;
-      color: var(--primary-text-color);
-    }
-    h3 {
-      font-family: "archivo_semibold";
-      font-size: 50px;
-    }
-    h4 {
-      font-family: "obviously", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 72px;
-      color: var(--primary-text-color);
-    }
-    h5 {
-      color: var(--primary-text-color);
-      font-family: "archivo_semibold";
-      font-size: 35px;
-    }
+  --secondary-text-color: #fc4d5c;
 
-    h6 {
-      font-family: "obviously", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      font-size: 40px;
-    }
+  /*strokes */
+  --acent-color: #273aaa;
 
-    p {
-      color: var(--primary-text-color);
-      font-family: "archivo_semibold";
-      font-size: 16px;
-    }
+  /*Typer af fonte*/
+  --primary-font: "obviously", sans-serif;
+  --secondary-font: "archivo", sans-serif;
 
-    /*tekst*/
-    --primary-text-color: #273aaa;
+  --primary-line-height: 1.5;
+  --primary-list-style: none;
 
-    --secondary-text-color: #fc4d5c;
+  /*SKRIFT-STØRRELSER*/
+  /* --primary-font-size: 24px; */
 
-    /*strokes */
-    --acent-color: #273aaa;
+  /*h2, bruges til overskrifter, næstmestbrugte str.*/
+  --secondary-font-size: 74px;
 
-    /*Typer af fonte*/
-    --primary-font: "obviously", sans-serif;
-    --secondary-font: "archivo", sans-serif;
+  --tertiary-font-size: 80px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background: #000; */
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-    --primary-line-height: 1.5;
-    --primary-list-style: none;
+body {
+  background-color: var(--primary-baground-color);
+  margin: 40px;
+}
 
-    /*SKRIFT-STØRRELSER*/
-    /* --primary-font-size: 24px; */
+@font-face {
+  font-family: archivo_semibold;
+  src: url ("../../public/fonts/ArchivoExpanded-SemiBold.woff2");
+}
 
-    /*h2, bruges til overskrifter, næstmestbrugte str.*/
-    --secondary-font-size: 74px;
+h1 {
+  font-family: "obviously", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 79px;
+  color: var(--primary-text-color);
+}
+h2 {
+  font-family: "obviously", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  color: var(--primary-text-color);
+}
+h3 {
+  font-family: "archivo_semibold";
+  font-size: 50px;
+}
+h4 {
+  font-family: "obviously", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 72px;
+  color: var(--primary-text-color);
+}
+h5 {
+  color: var(--primary-text-color);
+  font-family: "archivo_semibold";
+  font-size: 35px;
+}
 
-    --tertiary-font-size: 80px;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background: #000; */
-  }
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+h6 {
+  font-family: "obviously", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
 
-  body {
-    background-color: var(--primary-baground-color);
-    margin: 40px;
-  }
+p {
+  color: var(--primary-text-color);
+  font-family: "archivo_semibold";
+  font-size: 16px;
 }

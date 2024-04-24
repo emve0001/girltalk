@@ -31,6 +31,9 @@ const { text , svar} = Astro.props;
     gap: 5%;
   }
 
+  .fold-out-btn:hover{
+   padding: 2%;
+  }
   img {
     width: 30px;
     place-self: center;
@@ -70,6 +73,29 @@ const { text , svar} = Astro.props;
     margin-left: 40%;
     width: fit-content;
   }
+
+  @media screen and (max-width: 800px) {
+    .fold-out-btn {
+    font-size: 16px;
+    padding: 5% 5%;
+    cursor: pointer;
+    margin-left: 20%;
+  }
+
+  .additional-content {
+    font-size: 16px;
+    padding: 5% 5%;
+   margin-left: 0%; 
+   margin-bottom: 5%;
+  }
+  img {
+    width: 20px;
+  }
+
+  .grid1_1{
+   gap: 1rem;
+  }
+}
 </style>
 
 <script>

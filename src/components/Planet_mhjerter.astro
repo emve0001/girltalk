@@ -1,43 +1,122 @@
 ---
  import MainLayout from "../MainLayout.astro";
 ---
+<div class="container">
 
-<div class="hjerter"><img src="src/./img/planet.webp" alt="planetmhjerter"></div>
+<div class="hj"> <img src="../../img/hjerter2.webp" alt="hjerter"></div>
+<div class="planet"><img src="../../img/planet.webp" alt="planetmhjerter"></div></div>
 
 <div><p>Husk på du ikke sidder alene med dine følelser!</p></div>
 
-<div class="streg"><img src="src/./img/streg.webp" alt="streg"></div>
+<div class="streg"><img src="../../img/streg.webp" alt="streg"></div>
 
 
 <style>
-.hjerter {
+    @keyframes rotatePlanet {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.planet img {
+animation: rotatePlanet 30s linear infinite;
+}
+.container {
+ position: relative;
  display: flex;
  justify-content: center;
  align-items: center;
+ flex-direction: column;
  height: 60vh;
-
+ margin-top: 150px;
+}
+.hj{
+position: absolute;
+top: 0;
+z-index: 1;
+margin-top: -55px;
+}
+.planet{
+z-index: 0;
 }
 img{
 max-width: 100%;
 max-height:100%;
-width: auto;
-height: auto;
-max-width: 80%;
 }
 p{
-    text-align: center;
+text-align: center;
+color: var(--primary-text-color);
+font-family: "archivo_semibold";
+font-size: 16px;
+
 }
 .streg img{
     width: 40px;
     margin-left: 108px;
+    margin-bottom:150px ;
+
 }
 @media screen and (min-width: 768px) {
-.streg img {
-        width: 40px; 
-        margin-left: 638px; 
+
+    @media screen and (min-width: 768px) {
+    
+    @keyframes rotatePlanet {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .planet img {
+        max-width: 30%;
+        animation: rotatePlanet 30s linear infinite;
+    }
+
+    
 }
-img {
-    margin-bottom: 30px;
+    .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 300px;
+    }
+
+    .hj {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        z-index: 0;  
+    }
+
+    .hj img {
+        max-width: 35%;
+    }
+
+    .streg img {
+        width: 40px;
+        margin: 0 auto;
+        margin-bottom: 30px; 
+        margin-left: 44.5%;
+    }
+
+    .planet {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+        margin-top: 140px; 
+    }
+
+    p {
+        margin-top: 90px;
+    }
 }
-}
+
 </style>
