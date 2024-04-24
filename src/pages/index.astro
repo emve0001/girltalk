@@ -15,8 +15,11 @@ import Fire_knapper from "../components/Fire_knapper.astro"
 
 <MainLayout>
 	<Top_banner />
+	<section class="margin-">
 	<Samtale_boks />
+</section>
 	<Run_banner />
+	<section class="margin-">
 	<Post_it />
 	<Hjerne />
 <Post_it2 />
@@ -24,9 +27,14 @@ import Fire_knapper from "../components/Fire_knapper.astro"
 <Post_it3 />
 <Fire_knapper />
 <FaqBoks />
+</section>
 </MainLayout>
 
-
+<style>
+	.margin-{
+margin: 40px;
+	}
+</style>
 
 
 
