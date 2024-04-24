@@ -8,20 +8,52 @@ const { text , svar} = Astro.props;
     <div>{text}</div>
   </button>
 
-  <button>
-    <div class="additional-content">
-      <!-- Yderligere indhold, der foldes ud eller skjules -->
-      {svar}
+  <div>
+    <button>
+      <div class="additional-content">
+        <!-- Yderligere indhold, der foldes ud eller skjules -->
+        {svar}
+      </div>
+    </button>
+  </div>
+
+  <div class="grid2-1">
+    <p>Fik du svar på dit spørgsmål?</p>
+    <div class="flex">
+      <a href=""> <img src="../../public/img/thumbsUp.svg" alt="thumbs up"></a>
+      <a href=""><img id="down" src="../../public/img/thumbsUp.svg" alt="thumbs down"></a>
     </div>
-  </button>
+  </div>
+
+  
+  <div class="flex">
+    <a href=""><img src="../../public/img/brevkasse-knap.webp" alt="brevkasse"></a>
+    <a href=""><img src="../../public/img/community-knap.webp" alt="fælleskaber"></a>
+    <a href=""><img src="../../public/img/podcast-knap.webp" alt="fælleskaber"></a>
+    <a href=""><img src="../../public/img/FAQ.webp" alt="fælleskaber"></a>
+  </div>
+  
+  
 </div>
 
 <style>
+
+  #down{
+    rotate: 180deg;
+  }
   button {
     border: none;
     background-color: transparent;
   }
 
+  a img:hover{
+    
+  }
+
+  .grid2-1{
+    display: grid;
+   gap: 1rem;
+  }
   .grid1_1{
     display: grid;
    gap: 2rem;
