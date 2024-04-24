@@ -1,18 +1,103 @@
 ---
  import MainLayout from "../MainLayout.astro";
+ import Iphone_ikon from "../components/Iphone_ikon.astro"
+ import Scroll_ned from "../components/Scroll_ned.astro"
+
+
 ---
 <section id="top_start">
+    <figure id="stjerner">
+        <img src="../../public/img/stjerne1.webp" alt="blå stjerne">
+        <img id="smallstar2" src="../../public/img/stjerne1.webp" alt="lille blå stjerne">
+    </figure>
 <div id="iphone">
-    <figure id="clock"></figure>
-    <figure id="besked"></figure>
+    <Iphone_ikon />
 </div>
 <h1>Var der kø til chatten?</h1>
-<!-- svg -->
+<div id="ned"><Scroll_ned /></div>
+<figure id="stjerner2">
+    <img id="smallstar" src="../../public/img/stjerne1.webp" alt="lille blå stjerne">
+    <img src="../../public/img/stjerne1.webp" alt="blå stjerne">
+</figure>
+
 </section>
+
+
+
 <style>
 #top_start{
-    height: 800px;
+    max-height: 800px;
 background-color: var(--secondary);
+display:grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 1fr 3fr 1fr 2fr;
+}
+img{
+max-width: 60%;
+max-height:60%;
+width: auto;
+height: auto;
+    }
+#smallstar{
+    max-width: 20%;
+    margin-right:20px;
+}
+#smallstar2{
+    max-width: 20%;
+    margin-left: 20%;
+}
 
+/* grid */
+#stjerner{
+    grid-area: 1 / span 2;
+    margin-left: 20px;
+    margin-top: 10px;
+    max-width: 130px;
+}
+#iphone{
+    grid-area: 2 / span 5;
+    justify-self: center;
+}
+h1{
+ grid-area: 3 /  span 5;  
+ text-align: center;
+}
+#ned{
+    grid-area: 4 / 3;
+}
+#stjerner2{
+    grid-area: 4 / 5;
+    margin-left: 20px;
+    margin-top: 10px;
+    max-width: 130px;
+}
+@media screen and (min-width: 768px) {
+    #top_start{
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 1fr 2fr 1fr 1fr;
+}
+    #stjerner{
+    grid-area: 1 / 1;
+    margin-left: 20px;
+    margin-top: 10px;
+    justify-self: flex-end;
+}
+#iphone{
+    grid-area: 2 / span 5;
+    justify-self: center;
+   place-self: center;
+}
+h1{
+font-size: 32px;
+ grid-area: 3 /  span 5;  
+ text-align: center;
+}
+#ned{
+    grid-area: 4 / 3;
+}
+#smallstar2{
+    max-width: 20%;
+    margin-left: 40%;
+}
 }
 </style>

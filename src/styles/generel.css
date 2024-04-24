@@ -74,13 +74,13 @@ h4 {
   font-family: "obviously", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 50px;
+  font-size: 55px;
   color: var(--primary-text-color);
 }
 h5 {
   color: var(--primary-text-color);
   font-family: "archivo_semibold";
-  font-size: 32px;
+  font-size: 28px;
 }
 
 h6 {

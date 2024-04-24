@@ -6,7 +6,7 @@ import "../styles/generel.css";
 <h4>ER DER STADIG KØ TIL CHATTEN?</h4>
 <h5>Dette er blot et af de emner du kan læse mere om i vores FAQ, brevkasse eller lytte til i vores podcast, mens du venter. </h5> 
    <h5>Online chat giver en sikker plads, hvor folk kan dele deres problemer og bekymringer anonymt, hvilket især er vigtigt for unge, der måske er tilbageholdende med at tale om personlige emner ansigt til ansigt.</h5>  
-   <h5> Hos girlttlak er der ingen spørgsmål, der er for store eller små, og de er der for at lytte og støtte.</h5> 
+   <h5> Hos girltalk er der ingen spørgsmål, der er for store eller små, og de er der for at lytte og støtte.</h5> 
 </section>
 <section class="box2"></section>
 </section>
@@ -14,6 +14,8 @@ import "../styles/generel.css";
 
 .container {
   position: relative;
+  margin-top: 120px;
+  margin-bottom: 160px;
 }
       .box1 {
         position: relative;
@@ -40,5 +42,35 @@ import "../styles/generel.css";
     h5 {
         color: #273aaa;
         margin-bottom: 15px;
+    }
+
+    @media screen and (min-width: 800px) {
+        .box1 {
+            width: 98%;
+            min-height:540px;
+            padding: 20px;
+        }
+        .box2 {
+            width: 98%;
+            height: 100%;
+        }
+
+        .box1 {
+        padding-left: 80px;
+        padding-right: 110px;
+    }
+    h5 {
+        margin: 10px;
+        padding: 10px;
+        
+    }
+    h4 {
+        margin: 10px;
+        padding: 10px;
+        padding-bottom: 30px ;
+        padding-top: 30px;
+        max-width: 1200px;
+    }
+
     }
 </style>
