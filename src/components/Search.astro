@@ -1,6 +1,3 @@
----
-
----
 <form>
   <input type="text" name="søgefelt" placeholder="Søg her..." />
 
@@ -27,8 +24,19 @@
     width: 90%;
     line-height: 3rem;
   }
-
   input::placeholder {
     color: #c9c4c4; /* Farve på placeholder-teksten */
   }
+
+  /* -------------------- MOBIL -------------------- */
+@media screen and (max-width: 800px) {
+  input {
+    font-size: 18px;
+    width: 85%;
+  }
+  img {
+    width: 30px;
+  }
+}
+
 </style>
