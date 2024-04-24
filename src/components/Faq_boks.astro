@@ -5,7 +5,7 @@ import Search from "../components/Search.astro";
 ---
 
 <div class="grid">
-  <h4>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h4>
+  <h1>FAQ: FÅ SVAR PÅ HVAD DU SØGER</h1>
   <img src="../../public/img/FAQ.svg" alt="talebobler" />
 </div>
 
@@ -24,12 +24,12 @@ import Search from "../components/Search.astro";
 <div>
   <Fold_ud_knapper
     text="Hvordan vet jeg om noen liker meg tilbake?"
-    svar="Se etter tegn på interesse og vær ærlig med deg selv. Spør direkte hvis du er usikker! Lykke til!"
+    svar="Her står et godt svar"
   />
   <Fold_ud_knapper
     text="Hvordan kan jeg få mot til å snakke med personen jeg liker?"
     svar="Her står et godt svar"
-  />
+  >
     <Fold_ud_knapper
       text="Hva gjør jeg hvis jeg blir avvist?"
       svar="Her står et godt svar"
@@ -38,54 +38,37 @@ import Search from "../components/Search.astro";
       text="Hvordan kan personen jeg liker legge merke til meg?"
       svar="Her står et godt svar"
     />
-  <Fold_ud_knapper
-  text="Hvordan kan personen jeg liker legge merke til meg?"
-      svar="Her står et godt svar"/>
-</div>
+  </Fold_ud_knapper>
 
-<style>
-  div {
-    margin: 5px 30px;
-  }
-  h4 {
-    color: var(--primary-text-color);
-    font-family: var(--primary-font);
-    line-height: var(--primary-line-height);
-    text-align: stretch;
-  }
-
-  .grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-  .grid1-5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    margin: 30px 30px;
-  }
-
-  #soeg {
-    margin: 5% 10%;
-  }
-
-  /* -------------------- MOBIL -------------------- */
-  @media screen and (max-width: 800px) {
+  <style>
     div {
-      margin: 5% 5%;
+      margin: 5px 30px;
     }
-    h4 {
-      font-size: 22px /* var(--secondary-font-size) */;
+    h1 {
+      color: var(--primary-text-color);
+      font-family: var(--primary-font);
+      font-size: 50px /* var(--secondary-font-size) */;
+      line-height: var(--primary-line-height);
+      text-align: stretch;
     }
+
     img {
       max-width: 400px;
     }
 
-    .grid1-5 {
-      display: flex;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      gap: 1%;
-      margin: 5% 0%;
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
     }
-  }
-</style>
+    .grid1-5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin: 30px 30px;
+    }
+
+    #soeg {
+      margin: 5% 10%;
+    }
+  </style>
+</div>
