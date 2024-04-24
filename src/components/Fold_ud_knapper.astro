@@ -8,27 +8,56 @@ const { text , svar} = Astro.props;
     <div>{text}</div>
   </button>
 
-  <button>
-    <div class="additional-content">
-      <!-- Yderligere indhold, der foldes ud eller skjules -->
-      {svar}
+  <div>
+    <button>
+      <div class="additional-content">
+        <!-- Yderligere indhold, der foldes ud eller skjules -->
+        {svar}
+      </div>
+    </button>
+  </div>
+
+  <div class="grid2-1 additional-content2">
+    <p>Fik du svar på dit spørgsmål?</p>
+    <div class="flex">
+      <button class="fold-out-btn2"><img  src="/img/thumbsUp.svg" alt="thumbs up"></button>
+      <button class="fold-out-btn2"><img  id="down" src="/img/thumbsUp.svg" alt="thumbs down"></button>
     </div>
-  </button>
+  </div>
+
+  
+  <div class="flex">
+    <a href="https://www.girltalk.dk/pigetanker/"><img class="additional-content3" src="../../public/img/brevkasse-knap.webp" alt="brevkasse"></a>
+    <a href="https://www.girltalk.dk/vores-tilbud/faellesskaber/"><img class="additional-content3" src="../../public/img/community-knap.webp" alt="fælleskaber"></a>
+    <a href="https://open.spotify.com/show/15oq5yztN1NwZjQn4HIMLg?si=0981fdf5abfa4844"><img class="additional-content3" src="../../public/img/podcast-knap.webp" alt="fælleskaber"></a>
+    <a href=""><img class="additional-content3" src="../../public/img/FAQ.webp" alt="fælleskaber"></a>
+  </div>
+  
+  
 </div>
 
 <style>
+
+  #down{
+    rotate: 180deg;
+  }
   button {
     border: none;
     background-color: transparent;
   }
 
+  .grid2-1{
+    display: grid;
+   gap: 1rem;
+  }
   .grid1_1{
     display: grid;
-   gap: 2rem;
+   gap: 1rem;
   }
   .flex {
     display: flex;
     gap: 5%;
+    margin-top: 2%;
   }
 
   .fold-out-btn:hover{
@@ -60,6 +89,25 @@ const { text , svar} = Astro.props;
   .additional-content.show {
     display: block;
   }
+  .additional-content2 {
+    display: none;
+    cursor: pointer;
+  }
+  /* Vis det yderligere indhold, når det har klassen "show" */
+  .additional-content2.show {
+    display: block;
+    margin-left: 10%;
+  }
+
+  .additional-content3 {
+    display: none;
+    cursor: pointer;
+  }
+  /* Vis det yderligere indhold, når det har klassen "show" */
+/*   .additional-content3.show {
+    display: block;
+    margin-left: 10%;
+  } */
 
   /* Tilføj lidt styling til fold-ud knappen */
   .fold-out-btn {
@@ -82,6 +130,9 @@ const { text , svar} = Astro.props;
     margin-left: 20%;
   }
 
+  .fold-out-btn:hover{
+   padding: 6%;
+  }
   .additional-content {
     font-size: 16px;
     padding: 5% 5%;
@@ -101,14 +152,25 @@ const { text , svar} = Astro.props;
 <script>
   // Find fold-ud knappen og det yderligere indhold
   const foldOutBtn = document.querySelector(".fold-out-btn");
+  const foldOutBtn2 = document.querySelector(".fold-out-btn2");
   const additionalContent = document.querySelector(".additional-content");
+  const additionalContent2 = document.querySelector(".additional-content2");
+  const additionalContent3 = document.querySelector(".additional-content3");
   const pil = document.querySelector(".drej");
 
   // Tilføj en eventlistener til fold-ud knappen
   foldOutBtn.addEventListener("click", function () {
     // Skift tilstanden for det yderligere indhold mellem synlig og skjult
     additionalContent.classList.toggle("show");
+    additionalContent2.classList.toggle("show");
     pil.classList.toggle("omvendt");
+    
+  });
+
+    // Tilføj en eventlistener til fold-ud knappen
+    foldOutBtn2.addEventListener("click", function () {
+    // Skift tilstanden for det yderligere indhold mellem synlig og skjult
+    additionalContent3.classList.toggle("show");
     
   });
 </script>
